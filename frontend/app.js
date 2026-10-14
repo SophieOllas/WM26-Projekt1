@@ -1,5 +1,5 @@
-const BOARD_API_URL = 'http://localhost:8301';
-const LOGIN_API_URL = 'http://localhost:8300';
+const BOARD_API_URL = 'https://wm-26-projekt-1-wm26-rahti.2.rahtiapp.fi';
+const LOGIN_API_URL = 'https://wm-26-docker-wm26-rahti2.2.rahtiapp.fi';
 
 const boardEl = document.getElementById('board');
 const boardSelect = document.getElementById('boardSelect');
