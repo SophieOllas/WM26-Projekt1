@@ -1,0 +1,46 @@
+@API_URL = http://localhost:8301
+@DEV_TOKEN = {{$dotenv DEV_TOKEN}}
+@BOARD_ID = 2
+
+### Get notes for a board
+GET {{API_URL}}/notes?board_id={{BOARD_ID}}
+Authorization: Bearer {{DEV_TOKEN}}
+
+### Get one note from a board
+GET {{API_URL}}/notes/1?board_id={{BOARD_ID}}
+Authorization: Bearer {{DEV_TOKEN}}
+
+### Create note for a board
+POST {{API_URL}}/notes
+Authorization: Bearer {{DEV_TOKEN}}
+Content-Type: application/json
+
+{
+  "board_id": {{BOARD_ID}},
+  "note": "Test note 2",
+  "x": 120,
+  "y": 50,
+  "color": "#7057ff"
+}
+
+### Update note
+PUT {{API_URL}}/notes/1
+Authorization: Bearer {{DEV_TOKEN}}
+Content-Type: application/json
+
+{
+  "board_id": {{BOARD_ID}},
+  "note": "Updated note",
+  "x": 200,
+  "y": 90,
+  "color": "#d6f5ff"
+}
+
+### Delete note
+DELETE {{API_URL}}/notes/2
+Authorization: Bearer {{DEV_TOKEN}}
+Content-Type: application/json
+
+{
+  "board_id": {{BOARD_ID}}
+}
